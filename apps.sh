@@ -6,4 +6,5 @@ firefox https://discord.com/api/download?platform=linux&format=deb
 firefox https://telegram.org/dl/desktop/linux
 
 wget -qO- https://get.pnpm.io/install.sh | sh -
+. ~/.bashrc
 pnpm env use --global lts
