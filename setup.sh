@@ -32,11 +32,11 @@ bash lightdm.sh
 # Brave
 curl -fsS https://dl.brave.com/install.sh | sh
 
+echo "[!] Add it to AutoStart to use the trackpad:"
+echo "        synclient tapbutton1=1"
 read -p "Reboot the system? [Y/n]: " response
 if [[ "$response" == "Y" || "$response" == "y" ]]; then
   reboot
 else
   echo "[!] Reboot is needed to refresh xfce4"
-  echo "[!] After reboot run to use the trackpad"
-  echo "        synclient tapbutton1=1"
 fi
