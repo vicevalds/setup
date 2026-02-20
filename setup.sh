@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-BACKGROUND="monet.png"
+BACKGROUND="dore.png"
 
 if [[ $(whoami) == "root" ]]; then
   echo "[!] Run this script as unprivileged user (no sudo)"
@@ -26,11 +26,8 @@ cp .bashrc ~/.
 # Set xfce4 enviroment
 xfce4-panel-profiles load xfce4-custom.tar.bz2
 xfconf-query -c xfce4-desktop -p $(xfconf-query -c xfce4-desktop -l | grep "workspace0/last-image") -s /usr/share/images/desktop-base/${BACKGROUND}
-
 # Custom lightdm
 bash lightdm.sh
-# Brave
-curl -fsS https://dl.brave.com/install.sh | sh
 
 echo "[!] Add it to AutoStart to use the trackpad:"
 echo "        synclient tapbutton1=1"
